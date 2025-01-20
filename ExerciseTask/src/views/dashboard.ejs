@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stylish Card</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-green-400 via-blue-500 to-purple-600 min-h-screen gap-10 flex flex-wrap items-center justify-center">
+    
+        <% user.forEach((elem)=>{ %>
+            <a href="/profile/<%= elem._id%>">
+        <div class="bg-white shadow-xl rounded-lg overflow-hidden w-96 h-auto transform transition duration-500 hover:scale-105">
+   
+            <div class="h-48 bg-cover bg-center" style="background-image: url(''<%= elem.imageUrl %>') "></div>
+        
+            
+            <div class="p-6">
+              <h2 class="text-2xl font-bold text-gray-800 mb-2"><%= elem.username %></h2>
+              <p class="text-gray-600"><%= elem.bio || 'No bio available' %></p>
+            </div>
+        
+        
+         
+        
+          </div>
+        </a>
+        <%})%>
+  
+</body>
+</html>
