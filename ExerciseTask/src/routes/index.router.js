@@ -5,7 +5,7 @@ const indexController = require("../controllers/index.controller")
 
 router.get('/', indexController.loginPage)
 
-router.get('/register', indexController.registerPage)
+router.post('/register', indexController.registerPage)
 
 router.get("/profile/:id", indexController.profilepage)
 
